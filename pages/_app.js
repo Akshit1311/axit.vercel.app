@@ -1,8 +1,12 @@
+import Navbar from "@components/Navbar";
+import Sidebar from "@components/Sidebar";
 import VantaContainer from "@components/VantaContainer";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   useEffect(() => {
     const threeScript = document.createElement("script");
 
@@ -23,6 +27,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <VantaContainer>
+      <Navbar setIsSidebarOpen={setIsSidebarOpen} />
+      <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
       <Component {...pageProps} />
     </VantaContainer>
   );

@@ -31,7 +31,8 @@ const projects = () => {
     {
       title: "Portfolio",
       desc: "Portfolio Website showcasing my skills and projects.",
-      url: "https://indiedogcommune.com/",
+      url: "https://Akshit1311.github.io/",
+      gh: "https://github.com/Akshit1311/Akshit1311.github.io",
       cover: PortfolioCover,
       tech: [
         { alt: "React JS", icon: ReactIcon },
@@ -59,7 +60,7 @@ const projects = () => {
     {
       title: "Fintract",
       desc: "Dashboard for managing product registrations",
-      url: "https://beta.huddle01.com/",
+      url: "https://finnobot-assistant.fintractglobal.com/",
       cover: FintractCover,
       tech: [
         { alt: "React JS", icon: ReactIcon },
@@ -73,7 +74,8 @@ const projects = () => {
     {
       title: "UBC",
       desc: "Unlock Business Consulting (UBC), business consulting website (freelancing project).",
-      url: "https://beta.huddle01.com/",
+      url: "https://www.ubconsulting.in/",
+      gh: "https://github.com/Akshit1311/UBConsulting",
       cover: UBCCover,
       tech: [
         { alt: "React JS", icon: ReactIcon },
@@ -86,6 +88,7 @@ const projects = () => {
       title: "Indie Dog Commune (NGO)",
       desc: "Indie Dog Commune, a registered trust, is a group of devoted, passionate and animal caring citizens.",
       url: "https://indiedogcommune.com/",
+      gh: "https://github.com/Akshit1311/IndieDogCommune",
       cover: IndieDogCommuneCover,
       tech: [
         { alt: "Express JS", icon: ExpressIcon },
@@ -98,6 +101,7 @@ const projects = () => {
       title: "Fortignus",
       desc: "Security Website Design Template, for showcasing products & tools",
       url: "https://akshit1311.github.io/Fortignus/",
+      gh: "https://github.com/Akshit1311/Fortignus",
       cover: FortignusCover,
       tech: [
         { alt: "HTML 5", icon: HTMLIcon },
@@ -109,10 +113,9 @@ const projects = () => {
 
   return (
     <div>
-      <Navbar />
       <div className={styles.container}>
         <div className={styles.projectsGrid}>
-          {projects.map(({ title, desc, url, cover, tech }) => (
+          {projects.map(({ title, desc, url, gh, cover, tech }) => (
             <div key={title} className={styles.projectCard}>
               <div className={styles.projectCard__title}>{title}</div>
               <div className={styles.projectCard__desc}>{desc}</div>
@@ -138,21 +141,24 @@ const projects = () => {
                 <div className={styles.projectCard__projectImage}>
                   <div className={styles.projectCard__projectOverlay}>
                     <div>
-                      <svg
-                        className="octicon octicon-mark-github v-align-middle"
-                        height="32"
-                        viewBox="0 0 16 16"
-                        version="1.1"
-                        width="32"
-                        aria-hidden="true"
-                        color="white"
-                      >
-                        <path
-                          fill="white"
-                          fillRule="evenodd"
-                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-                        ></path>
-                      </svg>
+                      {gh && (
+                        <svg
+                          className="octicon octicon-mark-github v-align-middle"
+                          height="32"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="32"
+                          aria-hidden="true"
+                          color="white"
+                          onClick={() => window.open(gh)}
+                        >
+                          <path
+                            fill="white"
+                            fillRule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                          ></path>
+                        </svg>
+                      )}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"

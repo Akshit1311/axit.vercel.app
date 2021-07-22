@@ -15,8 +15,6 @@ import socials from "data/socials";
 function about() {
   return (
     <div>
-      <Navbar />
-
       <div className={styles.container}>
         <div className={styles.resume}>
           <a className={styles.download} href="/resume.pdf" download>
@@ -37,7 +35,7 @@ function about() {
             </svg>
           </a>
 
-          <Image src={ResumeImg} alt="resume" layout="responsive" />
+          <Image src={ResumeImg} alt="resume" layout="responsive" priority />
         </div>
         <div className={styles.col}>
           <div>
@@ -59,5 +57,7 @@ function about() {
     </div>
   );
 }
+
+// Akshit1311.github.io
 
 export default about;

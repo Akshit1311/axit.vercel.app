@@ -11,7 +11,9 @@
   align-items: center;
   padding: 2rem 4rem;
   backdrop-filter: blur(8px);
-  z-index: 2;
+  -webkit-backdrop-filter: blur(8px);
+  -moz-backdrop-filter: blur(8px);
+  z-index: 3;
 }
 
 .navbar__item {

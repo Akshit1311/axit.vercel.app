@@ -1,0 +1,32 @@
+.container {
+  font-family: "Share Tech Mono", monospace;
+  position: fixed;
+  background: rgb(26, 26, 26);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.striked {
+  text-decoration: line-through;
+}
+
+.link {
+  margin-bottom: 2rem;
+}
+
+.isClosed {
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+}
+
+.isOpen {
+  transform: translateX(0%);
+  transition: 0.5s ease-in-out;
+}

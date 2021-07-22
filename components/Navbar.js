@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import styles from "@styles/Navbar.module.css";
 import { useRouter } from "next/dist/client/router";
+import links from "data/links";
 
-const Navbar = () => {
+const Navbar = ({ setIsSidebarOpen }) => {
   //hooks
   const router = useRouter();
 
@@ -13,21 +14,6 @@ const Navbar = () => {
   useEffect(() => {
     setIsMob(window.innerHeight > window.innerWidth);
   }, []);
-
-  const links = [
-    {
-      title: "Home",
-      to: "/",
-    },
-    {
-      title: "Projects",
-      to: "/projects",
-    },
-    {
-      title: "About",
-      to: "/about",
-    },
-  ];
 
   console.log({ path: router.pathname });
 
@@ -54,6 +40,7 @@ const Navbar = () => {
         viewBox="0 0 20 20"
         fill="currentColor"
         className={styles.menuIcon}
+        onClick={() => setIsSidebarOpen((prev) => !prev)}
       >
         <path
           fillRule="evenodd"
