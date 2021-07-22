@@ -20,7 +20,7 @@ const Navbar = ({ setIsSidebarOpen }) => {
   return (
     <div className={styles.navbar}>
       <div className={styles.navbar__item}>
-        {">"} cd /{links.find(({ to }) => to === router.pathname).title}/
+        {">"} cd /{links.find(({ to }) => to === router.pathname)?.title}/
       </div>
 
       <div className={`${styles.navbar__item} ${styles.navbar__item__right}`}>
