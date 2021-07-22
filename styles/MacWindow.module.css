@@ -1,0 +1,88 @@
+.macWindow {
+  background: rgba(12, 12, 12, 0.4);
+  height: 70vh;
+  width: 60vw;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  box-shadow: 1px 1px 100px -40px var(--main-text-color);
+  border: 2px solid rgb(29, 29, 29);
+  overflow: hidden;
+}
+
+.macWindow__header {
+  box-shadow: 1px 1px 100px -18px var(--main-text-color);
+  border-radius: 1rem;
+  background: rgb(29, 29, 29);
+  /* background: black; */
+  display: flex;
+  padding: 0.75rem 1rem;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 2.25vh;
+  width: 2.25vh;
+  background: green;
+  margin-right: 0.75rem;
+}
+
+.circle:first-child {
+  background: tomato;
+}
+.circle:nth-child(2) {
+  background: #e9c250;
+}
+
+.macWindow__main {
+  color: var(--main-text-color);
+  padding: 1rem 1rem 0 1rem;
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+.socials {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.socials svg {
+  margin-right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .macWindow {
+    height: 30vh;
+    width: 90vw;
+  }
+
+  .macWindow__main {
+    font-size: 1rem;
+  }
+
+  .circle {
+    height: 2vh;
+    width: 2vh;
+  }
+}

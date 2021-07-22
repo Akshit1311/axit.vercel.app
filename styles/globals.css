@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap");
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -13,4 +17,72 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --text-orange: rgb(255, 136, 0);
+  --text-yellow: rgb(255, 196, 0);
+  --text-purple: rgb(221, 5, 203);
+  --text-green: rgb(25, 175, 32);
+  --text-blue: rgb(58, 156, 248);
+  --text-red: rgb(189, 14, 14);
+
+  --danger: red;
+  --primary: dodgerblue;
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+.text-white {
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1f1e1ecc;
+  border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(51, 51, 51);
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* width */
+::-moz-scrollbar {
+  width: 6px;
+  border-radius: 6px;
+}
+
+/* Track */
+::-moz-scrollbar-track {
+  background: #1f1e1ecc;
+  border-radius: 6px;
+}
+
+/* Handle */
+::-moz-scrollbar-thumb {
+  background: rgb(51, 51, 51);
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-moz-scrollbar-thumb:hover {
+  background: #555;
 }

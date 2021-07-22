@@ -1,0 +1,53 @@
+.navbar {
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  color: white;
+  position: fixed;
+  top: 0;
+  font-family: "Share Tech Mono", monospace;
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  backdrop-filter: blur(8px);
+  z-index: 2;
+}
+
+.navbar__item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__link {
+  padding: 0 1rem;
+  border-right: 2px solid white;
+  cursor: pointer;
+}
+
+.navbar__link:last-child {
+  border: none;
+}
+
+.d_none {
+  display: none;
+}
+
+.menuIcon {
+  height: 1.5rem;
+}
+@media screen and (max-width: 767px) {
+  .navbar {
+    padding: 2rem 1rem;
+  }
+
+  .navbar__item__right {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .navbar svg {
+    display: none;
+  }
+}

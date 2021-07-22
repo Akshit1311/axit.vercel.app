@@ -1,0 +1,91 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem 10vw;
+  grid-gap: 1rem;
+  place-items: center;
+}
+
+.col {
+  height: 70vh;
+  width: 100%;
+  /* background: red; */
+  display: grid;
+  place-items: center;
+  position: "relative";
+  color: white;
+  font-family: "Share Tech Mono", monospace;
+  text-align: center;
+}
+
+.resume {
+  height: 70vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.download {
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.325));
+  box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.75);
+  height: 30%;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.download:hover {
+  text-decoration: underline;
+}
+
+.download svg {
+  height: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.row {
+  font-size: 1.5rem;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.row svg {
+  max-width: 1.75rem;
+  margin-right: 1rem;
+}
+
+.rowUrl {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .row {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .col {
+    height: auto;
+    width: 100%;
+  }
+  .resume {
+    height: auto;
+    width: 100%;
+  }
+}
