@@ -31,7 +31,7 @@ const projects = () => {
     {
       title: "Portfolio",
       desc: "Portfolio Website showcasing my skills and projects.",
-      url: "https://Akshit1311.github.io/",
+      url: "https://axit.vercel.app/",
       gh: "https://github.com/Akshit1311/Akshit1311.github.io",
       cover: PortfolioCover,
       tech: [
