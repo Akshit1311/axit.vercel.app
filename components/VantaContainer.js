@@ -59,7 +59,11 @@ const VantaContainer = ({ children }) => {
 
   return (
     <div className={styles.container}>
-      <div ref={vantaRef} className={styles.vanta}>
+      <div
+        ref={vantaRef}
+        style={{ position: "absolute !important" }}
+        className={styles.vanta}
+      >
         <div className={styles.overlay}></div>
       </div>
 
